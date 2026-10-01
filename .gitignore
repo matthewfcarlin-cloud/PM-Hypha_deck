@@ -1,0 +1,4 @@
+node_modules/
+pdf-build/deck.html
+pdf-build/slide-*.png
+pdf-build/slide-*.jpg
