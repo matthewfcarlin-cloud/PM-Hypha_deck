@@ -4,7 +4,7 @@ const path = require('path');
 
 // Footer per slide (1-indexed). null = no footer. Numbers point to the References page.
 const FOOT = {
-  3: 'Sources: Materials [5][6][7] · Cost [10] · Waste [6][9] · Customer [11][12][13][14] · Labor-cost, mold and line-change figures from team research. Full references on the last pages.',
+  3: 'Sources: Materials [5][6][7] · Cost [10] · Waste [9] · Customer [11] · Mold cost and lead time from team research. Full evidence in the speaker notes; references on the last pages.',
   4: 'Sources: plastic waste and recycling [5][6][7] · EPR and polystyrene bans [1] · Full references on the last pages.',
   5: 'Sources: [5] US EPA, Plastics and Containers & Packaging data · [6] Our World in Data, "Packaging is the source of 40% of the planet\'s plastic waste" · [7] Beyond Plastics · [8] The Recycling Partnership',
   6: 'Green premiums compare recycled with standard materials. Source: [10] Packaging Technology Today, "The Rise of Sustainable Packaging in the U.S."',
