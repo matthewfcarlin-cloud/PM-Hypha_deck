@@ -377,6 +377,85 @@ p { margin: 0; }
 .vppl svg { width: 100%; height: 34px; fill: var(--rule); transition: fill .35s var(--ease); transition-delay: var(--d); }
 .on .vppl svg.f { fill: var(--forest); }
 
+
+/* ---------- Competitive analysis: SWOT ---------- */
+.src a { color: inherit; text-decoration: underline; text-decoration-color: #b9c2b6; text-underline-offset: 2px; }
+.swot { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 30px; }
+.sw { background: var(--card); border: 1px solid var(--rule); border-left: 5px solid var(--forest); padding: 20px 26px 22px; }
+.sw.bad { border-left-color: var(--s-conv); }
+.sw .k { display: flex; align-items: baseline; gap: 14px; }
+.sw .k b { font-family: var(--f-display); font-size: 30px; font-weight: 700; letter-spacing: -.01em; }
+.sw .k span { font-family: var(--f-mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--sage); }
+.sw ul { margin: 12px 0 0; padding-left: 20px; display: grid; gap: 8px; }
+.sw li { font-size: 18px; line-height: 1.4; color: var(--ink); }
+.sw li::marker { color: var(--forest); }
+.sw li i { font-style: normal; font-family: var(--f-mono); font-size: 13px; color: var(--sage); white-space: nowrap; }
+
+/* ---------- Competitive landscape: 2x2 ---------- */
+.ls { display: grid; grid-template-columns: 900px minmax(0, 1fr); gap: 46px; margin-top: 28px; }
+.plot { position: relative; width: 900px; height: 520px; background: var(--card); border: 1px solid var(--rule); overflow: hidden; }
+.plot .ax { position: absolute; background: var(--rule); }
+.plot .yl { position: absolute; left: 16px; font-family: var(--f-mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--sage); }
+.plot .grp { position: absolute; inset: 0; }
+.corner { position: absolute; left: 450px; top: 0; width: 450px; height: 260px; background: rgba(169,201,107,.24); }
+.corner b { position: absolute; right: 16px; bottom: 12px; font-family: var(--f-mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--forest); }
+.pt { position: absolute; width: 0; height: 0; }
+.pt i { position: absolute; left: -10px; top: -10px; width: 20px; height: 20px; border-radius: 50%; background: var(--sage); border: 3px solid var(--card); box-shadow: 0 0 0 1px var(--sage);
+  transform: scale(0); transition: transform .55s cubic-bezier(.3,1.6,.5,1); transition-delay: var(--d, 0s); }
+.pt span { position: absolute; left: 18px; top: -12px; white-space: nowrap; font-size: 17px; color: var(--ink); opacity: 0; transition: opacity .4s; transition-delay: calc(var(--d, 0s) + .15s); }
+.on .pt i { transform: scale(1); }
+.on .pt span { opacity: 1; }
+.pt.us i { left: -18px; top: -18px; width: 36px; height: 36px; background: var(--forest); border-color: var(--leaf); box-shadow: 0 0 0 10px rgba(169,201,107,.35), 0 0 34px rgba(169,201,107,.9); }
+.pt.us span { left: auto; right: 30px; top: -15px; font-family: var(--f-display); font-weight: 700; font-size: 23px; color: var(--forest); }
+.xl { display: flex; justify-content: space-between; width: 900px; margin-top: 12px; font-family: var(--f-mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--sage); }
+.lsr { padding-top: 6px; }
+.lsr h3 { margin: 12px 0 0; font-family: var(--f-display); font-size: 34px; font-weight: 700; line-height: 1.1; letter-spacing: -.02em; }
+.lsr ol { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 18px; }
+.lsr li { display: grid; grid-template-columns: 30px 1fr; gap: 10px; font-size: 18px; line-height: 1.4; color: var(--sage); padding-top: 14px; border-top: 1px solid var(--rule); }
+.lsr li b { color: var(--ink); font-weight: 600; }
+.lsr li .n { font-family: var(--f-mono); font-size: 14px; color: var(--forest); padding-top: 2px; }
+
+/* ---------- Comparison matrix ---------- */
+.mx { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 16px; table-layout: fixed; }
+.mx th { font-family: var(--f-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--sage); text-align: left; font-weight: 500; padding: 9px 12px; border-bottom: 2px solid var(--ink); }
+.mx td { padding: 9px 12px; border-bottom: 1px solid var(--rule); color: var(--ink); vertical-align: top; line-height: 1.35; }
+.mx td:first-child { font-family: var(--f-display); font-weight: 600; font-size: 18px; line-height: 1.2; }
+.mx td:first-child a { color: var(--ink); text-decoration: none; border-bottom: 1.5px solid var(--leaf); }
+.mx td:first-child small { display: block; margin-top: 2px; font-family: var(--f-body); font-weight: 400; font-size: 13px; color: var(--sage); }
+.mx .g { color: var(--forest); font-weight: 600; }
+.mx tr.us td { background: rgba(169,201,107,.3); border-bottom: 2px solid var(--forest); }
+.mx tr.us td:first-child { color: var(--forest); }
+
+/* ---------- Value proposition (Geoff Moore) ---------- */
+.moore { margin-top: 26px; border-bottom: 1px solid var(--rule); }
+.mr { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 30px; padding: 15px 0; border-top: 1px solid var(--rule); align-items: baseline; }
+.mr .lb b { display: block; font-family: var(--f-display); font-size: 30px; font-weight: 700; color: var(--forest); line-height: 1.1; }
+.mr .lb span { display: inline-block; margin-top: 4px; font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--sage); }
+.mr .lb span.pill { color: var(--paper); background: var(--forest); padding: 3px 8px; margin-left: 4px; }
+.mr p { font-family: var(--f-display); font-size: 27px; font-weight: 400; line-height: 1.3; letter-spacing: -.01em; color: var(--ink); }
+.mr p em { font-style: normal; color: var(--forest); font-weight: 500; }
+
+/* ---------- Visual value proposition ---------- */
+.vvp { display: grid; grid-template-columns: minmax(0, 1fr) 76px minmax(0, 1fr); gap: 18px; align-items: center; margin-top: 26px; }
+.vbox { background: var(--card); border: 1px solid var(--rule); padding: 18px 22px 20px; }
+.vbox.us { border: 2px solid var(--forest); }
+.vbox .lbl { font-family: var(--f-mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--s-conv); }
+.vbox.us .lbl { color: var(--forest); }
+.vbox svg { display: block; width: 100%; height: auto; margin-top: 10px; }
+.vbox p { margin-top: 10px; font-size: 17px; line-height: 1.4; color: var(--sage); }
+.varrow { width: 76px; height: 40px; display: block; overflow: visible; }
+.tipit { transform-box: view-box; transform-origin: 330px 300px; transition: transform .7s cubic-bezier(.3,1.6,.5,1) .9s; }
+.on .tipit { transform: rotate(-16deg); }
+.crk { opacity: 0; transition: opacity .2s 1.6s; }
+.on .crk { opacity: 1; }
+.foam { transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(0); transition: transform 1.8s var(--ease) .5s; }
+.on .foam { transform: none; }
+.sprout { opacity: 0; transition: opacity .6s ease 2.4s; }
+.on .sprout { opacity: 1; }
+.vtiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px; }
+.vtiles div { display: flex; align-items: center; gap: 14px; padding: 16px 20px; background: var(--card); border-top: 3px solid var(--forest); font-family: var(--f-display); font-size: 21px; font-weight: 600; }
+.vtiles svg { width: 34px; height: 34px; flex: none; color: var(--forest); }
+
 /* ---------- 13 Close ---------- */
 .close { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; height: 100%; align-items: center; }
 .close h1 { font-size: 150px; font-weight: 700; }
@@ -600,9 +679,10 @@ p { margin: 0; }
 <section class="slide" id="solSlide" data-title="How it works" data-notes="How Hypha works, on a loop. Scan: a camera at the pack station maps the box and the product in 3D. Print: a robotic nozzle extrudes Hypha paste, tracing only the empty space, like a 3D printer filling a mold. Expand: the paste foams and expands to lock the product in place, setting firm in seconds. Ship and return to soil: the customer composts it at home, and it breaks down in weeks. No plastic, no waste, no guesswork.">
   <div class="sol">
     <div>
-      <div class="eyebrow" data-b="0">How it works</div>
+      <div class="eyebrow" data-b="0">Product definition · How it works</div>
       <h2 data-b="0" style="--d:.1s">Scan. Print. Expand. <em>Return to soil.</em></h2>
-      <div class="steps2"><div class="step2" data-b="0" style="--d:0.2s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16 V6 H16 M32 6 H42 V16 M42 32 V42 H32 M16 42 H6 V32"/><path d="M10 24 H38"/></svg></div><div><h3>Scan</h3><p>A camera maps the box and product in 3D</p></div><i class="pb"></i></div><div class="step2" data-b="0" style="--d:0.3s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5 H33 V17 H15 Z M19 17 H29 L24 25 Z M8 40 H40 M12 33 H36"/></svg></div><div><h3>Print</h3><p>A nozzle traces only the empty space</p></div><i class="pb"></i></div><div class="step2" data-b="0" style="--d:0.4s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="6"/><path d="M24 4 V12 M24 36 V44 M4 24 H12 M36 24 H44 M10 10 L15 15 M33 33 L38 38 M38 10 L33 15 M15 33 L10 38"/></svg></div><div><h3>Expand</h3><p>The paste foams and locks the product in</p></div><i class="pb"></i></div><div class="step2" data-b="0" style="--d:0.5s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 40 H44 M8 40 C12 30 20 28 24 32 C28 28 36 30 40 40"/><path d="M24 30 V16 M24 20 C24 12 30 8 36 8 C36 14 30 20 24 20 M24 24 C24 18 18 14 12 14 C12 20 18 24 24 24"/></svg></div><div><h3>Return to soil</h3><p>Composts at home in weeks</p></div><i class="pb"></i></div></div>
+      <p class="lede" data-b="0" style="--d:.15s;margin-top:18px;font-size:22px;max-width:30ch">A smart void-fill system that 3D-prints biodegradable, mycelium-based foam into the box for a custom fit.</p>
+      <div class="steps2" style="margin-top:28px"><div class="step2" data-b="0" style="--d:0.2s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16 V6 H16 M32 6 H42 V16 M42 32 V42 H32 M16 42 H6 V32"/><path d="M10 24 H38"/></svg></div><div><h3>Scan</h3><p>A camera maps the box and product in 3D</p></div><i class="pb"></i></div><div class="step2" data-b="0" style="--d:0.3s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5 H33 V17 H15 Z M19 17 H29 L24 25 Z M8 40 H40 M12 33 H36"/></svg></div><div><h3>Print</h3><p>A nozzle traces only the empty space</p></div><i class="pb"></i></div><div class="step2" data-b="0" style="--d:0.4s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="6"/><path d="M24 4 V12 M24 36 V44 M4 24 H12 M36 24 H44 M10 10 L15 15 M33 33 L38 38 M38 10 L33 15 M15 33 L10 38"/></svg></div><div><h3>Expand</h3><p>The paste foams and locks the product in</p></div><i class="pb"></i></div><div class="step2" data-b="0" style="--d:0.5s"><div class="ic"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 40 H44 M8 40 C12 30 20 28 24 32 C28 28 36 30 40 40"/><path d="M24 30 V16 M24 20 C24 12 30 8 36 8 C36 14 30 20 24 20 M24 24 C24 18 18 14 12 14 C12 20 18 24 24 24"/></svg></div><div><h3>Return to soil</h3><p>Composts at home in weeks</p></div><i class="pb"></i></div></div>
     </div>
     <div class="printer" data-b="0" style="--d:.3s">
       <canvas id="printer" width="1200" height="1120" style="width:600px;height:560px;margin-top:80px" aria-label="Animation: the box is scanned, paste is printed into the empty space, it expands around the product, then composts"></canvas>
@@ -681,6 +761,92 @@ p { margin: 0; }
   <div class="src">Source: customer interview with the Holiday team, conducted by Ledger (Group 11). One interview; more needed to confirm the price ceiling.</div>
 </section>
 
+<!-- 9e · SWOT -->
+<section class="slide" data-beats="2" data-title="SWOT" data-notes="Our SWOT. Start with what is true about us. Strengths: in our competitor research we found nobody else who is both made on demand and home compostable, and the one custom-fit compostable option, molded mycelium, needs a $2K to $9K mold. Weaknesses: no prototype yet, and we don’t know our cost per order. Holiday pays about a dollar an order and said twice that is their limit. Click: then the outside world. Opportunities: void fill is $1.9 billion in the US and Canada, e-commerce is its biggest use, and EPR laws plus California’s plastic rules push brands off plastic. Click: threats. Incumbents already own the machines at the pack line, Ranpak and Packsize are getting smarter about fit, and paper fill is cheap and recyclable.">
+  <div class="eyebrow" data-b="0">Competitive analysis · SWOT</div>
+  <h2 data-b="0" style="--d:.1s;font-size:56px;max-width:none">Where we’re strong, and where we’re <em>exposed</em>.</h2>
+  <div class="swot">
+    <div class="sw" data-b="0" style="--d:.25s"><div class="k"><b>Strengths</b><span>Internal · helpful</span></div><ul>
+      <li>The only option we found that is both made on demand and home compostable <i>[16]–[22]</i></li>
+      <li>Custom fit for every box with no molds; molded mycelium needs $2K–$9K tooling <i>[20]</i></li>
+      <li>Plastic-free material: mushroom roots plus farm waste</li></ul></div>
+    <div class="sw bad" data-b="0" style="--d:.4s"><div class="k"><b>Weaknesses</b><span>Internal · harmful</span></div><ul>
+      <li>No prototype yet: expansion, set time and strength are untested</li>
+      <li>Cost per order unknown; Holiday pays ~$1 an order and caps a switch at 2× <i>[15]</i></li>
+      <li>Mycelium grows slowly (7 days for molded parts), so the paste must be pre-grown <i>[20]</i></li></ul></div>
+    <div class="sw" data-b="1"><div class="k"><b>Opportunities</b><span>External · helpful</span></div><ul>
+      <li>US &amp; Canada void fill: $1.9B in 2025, growing to $3.2B by 2035 <i>[1]</i></li>
+      <li>E-commerce is the largest use, at 42.1% of all void fill <i>[2]</i></li>
+      <li>EPR laws (CA, OR, WA) and California’s 25% single-use plastic cut by 2032 push brands off plastic <i>[1] [23]</i></li></ul></div>
+    <div class="sw bad" data-b="2"><div class="k"><b>Threats</b><span>External · harmful</span></div><ul>
+      <li>Incumbents already run fill machines at the pack line; the top 3 hold 18% of the market <i>[3] [16] [17]</i></li>
+      <li>Ranpak sizes paper fill with AI vision; Packsize’s right-sized boxes cut the need for fill <i>[18] [22]</i></li>
+      <li>Paper fill is cheap and curbside recyclable, “green enough” for many buyers <i>[17] [18]</i></li></ul></div>
+  </div>
+  <div class="src">Sources: <a href="https://www.futuremarketinsights.com/reports/united-states-and-canada-protective-packaging-market">[1] Future Market Insights, US &amp; Canada Protective Packaging</a> · <a href="https://marketintelo.com/report/void-fill-packaging-market">[2] Market Intelo, Void Fill Packaging</a> · <a href="https://www.futuremarketinsights.com/reports/void-fill-packaging-systems-market-share-analysis">[3] FMI, Void Fill Systems Market Share</a> · [15] Holiday interview (Group 11) · <a href="https://www.nasscoinc.com/item/100699531/Sealed-Air/">[16] Sealed Air</a> · <a href="https://uk.pregis.com/eu-solutions/by-need/inside-the-box-protection/void-fill-packaging/">[17] Pregis</a> · <a href="https://www.ranpak.com/void-fill/">[18] Ranpak</a> · <a href="https://mushroompackaging.com/">[20] Mushroom Packaging</a> · <a href="https://www.packsize.com/resources/faq">[22] Packsize</a> · <a href="https://www.grandviewresearch.com/industry-analysis/sustainable-packaging-market-report">[23] Grand View Research</a></div>
+</section>
+
+<!-- 9f · Competitive landscape -->
+<section class="slide" data-beats="3" data-title="Competitive landscape" data-notes="Our competitive landscape. Across: how well the fill fits, from the same fill in every box to fit to each product. Up: where it ends up, from landfill or store drop-off to home compostable. Click: the incumbents. Sealed Air’s air pillows, Pregis, Ranpak and Storopack all sit bottom left: generic plastic or paper. Click: the newer players. Molded mycelium from Mushroom Packaging and Magical Mushroom is compostable, but every shape needs its own mold and about a week to grow. Packsize fits the box, not the fill. Click: the top-right corner is empty. That’s where Hypha aims: fit to each product, made on demand, home compostable.">
+  <div class="eyebrow" data-b="0">Competitive analysis · Landscape</div>
+  <h2 data-b="0" style="--d:.1s;font-size:56px;max-width:none">One corner of the map is <em>empty</em>.</h2>
+  <div class="ls">
+    <div>
+      <div class="plot">
+        <div class="grp" data-b="3" style="transform:none"><div class="corner"><b>Custom fit + compostable</b></div></div>
+        <div class="ax" style="left:450px;top:0;width:2px;height:520px"></div>
+        <div class="ax" style="left:0;top:260px;width:900px;height:2px"></div>
+        <div class="yl" style="top:14px">▲ Home compostable</div>
+        <div class="yl" style="top:490px">▼ Landfill / store drop-off</div>
+        <div class="grp" data-b="1" style="transform:none">
+          <div class="pt" style="left:130px;top:420px;--d:0s"><i></i><span>Sealed Air (air pillows)</span></div>
+          <div class="pt" style="left:95px;top:305px;--d:.15s"><i></i><span>Storopack</span></div>
+          <div class="pt" style="left:200px;top:215px;--d:.3s"><i></i><span>Pregis</span></div>
+          <div class="pt" style="left:300px;top:295px;--d:.45s"><i></i><span>Ranpak</span></div>
+        </div>
+        <div class="grp" data-b="2" style="transform:none">
+          <div class="pt" style="left:520px;top:110px;--d:0s"><i></i><span>Mushroom Packaging</span></div>
+          <div class="pt" style="left:470px;top:180px;--d:.15s"><i></i><span>Magical Mushroom Co</span></div>
+          <div class="pt" style="left:720px;top:300px;--d:.3s"><i></i><span>Packsize</span></div>
+        </div>
+        <div class="grp" data-b="3" style="transform:none">
+          <div class="pt us" style="left:840px;top:58px;--d:.3s"><i></i><span>Hypha (target)</span></div>
+        </div>
+      </div>
+      <div class="xl"><span>◀ Generic fit · same fill in every box</span><span>Custom fit to each product ▶</span></div>
+    </div>
+    <div class="lsr">
+      <div class="eyebrow" data-b="0" style="--d:.3s">Reading the map</div>
+      <h3 data-b="0" style="--d:.35s">Nobody fits each product without plastic or a mold.</h3>
+      <ol>
+        <li data-b="1"><span class="n">01</span><span><b>On-demand fill is generic.</b> Sealed Air, Pregis and Ranpak make plastic or paper fill at the pack line.</span></li>
+        <li data-b="2"><span class="n">02</span><span><b>Green options are molded.</b> Mycelium is compostable but needs a mold per shape and a 7-day grow.</span></li>
+        <li data-b="3"><span class="n">03</span><span><b>Hypha takes the open corner:</b> printed to fit, made on demand, home compostable.</span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="src">Placed from each company’s own product page: <a href="https://www.nasscoinc.com/item/100699531/Sealed-Air/">[16] Sealed Air</a> · <a href="https://uk.pregis.com/eu-solutions/by-need/inside-the-box-protection/void-fill-packaging/">[17] Pregis</a> · <a href="https://www.ranpak.com/void-fill/">[18] Ranpak</a> · <a href="https://www.storopack.us/products/flexible-protective-packaging/paper-padding/paperbubbler/">[19] Storopack</a> · <a href="https://mushroompackaging.com/">[20] Mushroom Packaging</a> · <a href="https://magicalmushroom.com/">[21] Magical Mushroom Co</a> · <a href="https://www.packsize.com/resources/faq">[22] Packsize</a>. Hypha’s spot is a design target. Instapak and Cruz Foam are not placed: no product data in our sources.</div>
+</section>
+
+<!-- 9g · Comparison matrix -->
+<section class="slide" data-beats="1" data-title="Comparison matrix" data-notes="The comparison matrix. Each row is a competitor, each column is something a buyer cares about, and every company name links to its page. Notice how few publish prices; we wrote not public instead of guessing. Click: now add Hypha. It’s the only row that is made on demand, fit to each box, home compostable and needs no molds. Its cells are design targets, and the under $2 per order goal comes from our Holiday interview.">
+  <div class="eyebrow" data-b="0">Competitive analysis · Comparison matrix</div>
+  <h2 data-b="0" style="--d:.1s;font-size:56px;max-width:none">Side by side, on what <em>buyers</em> care about.</h2>
+  <table class="mx">
+    <colgroup><col style="width:18%"><col style="width:15%"><col style="width:12%"><col style="width:13%"><col style="width:15%"><col style="width:12%"><col style="width:15%"></colgroup>
+    <tr data-b="0" style="--d:.2s"><th>Company</th><th>Material</th><th>On demand?</th><th>Fit</th><th>End of life</th><th>Molds?</th><th>Public price</th></tr>
+    <tr class="us" data-b="1"><td>Hypha <small>Target, not yet built</small></td><td>Mycelium + farm waste</td><td class="g">Yes, at the pack line</td><td class="g">Custom, every box</td><td class="g">Home compostable</td><td class="g">None</td><td>Goal: under $2 per order</td></tr>
+    <tr data-b="0" style="--d:.3s"><td><a href="https://www.nasscoinc.com/item/100699531/Sealed-Air/">Sealed Air</a><small>Fill-Air air pillows</small></td><td>Plastic film</td><td class="g">Yes, inflated</td><td>Generic</td><td>Store drop-off only</td><td class="g">None</td><td>$835 per roll</td></tr>
+    <tr data-b="0" style="--d:.38s"><td><a href="https://uk.pregis.com/eu-solutions/by-need/inside-the-box-protection/void-fill-packaging/">Pregis</a><small>Paper, air, starch fill</small></td><td>Paper, film, starch</td><td class="g">Yes + pre-made</td><td>Generic</td><td>Curbside; Bio One industrial compost</td><td class="g">None</td><td>Not public</td></tr>
+    <tr data-b="0" style="--d:.46s"><td><a href="https://www.ranpak.com/void-fill/">Ranpak</a><small>FillPak paper systems</small></td><td>Kraft paper</td><td class="g">Yes</td><td>Generic, AI-sized</td><td>Curbside recyclable</td><td class="g">None</td><td>Not public</td></tr>
+    <tr data-b="0" style="--d:.54s"><td><a href="https://www.storopack.us/products/flexible-protective-packaging/paper-padding/paperbubbler/">Storopack</a><small>PAPERbubble sheets</small></td><td>Paper + air</td><td>No, pre-made</td><td>Generic</td><td>Recyclable</td><td class="g">None</td><td>Not public</td></tr>
+    <tr data-b="0" style="--d:.62s"><td><a href="https://mushroompackaging.com/">Mushroom Packaging</a><small>Ecovative</small></td><td>Mycelium + hemp hurd</td><td>No, grown ~7 days</td><td class="g">Custom (molded)</td><td class="g">Home compostable, ~45 days</td><td>$2K–$9K tool</td><td>$1,350 prototype fee</td></tr>
+    <tr data-b="0" style="--d:.7s"><td><a href="https://magicalmushroom.com/">Magical Mushroom Co</a><small>UK</small></td><td>Mycelium + farm by-products</td><td>No, grown</td><td>Not stated</td><td>Biodegrades ~45 days</td><td>Not stated</td><td>Claims parity with EPS</td></tr>
+    <tr data-b="0" style="--d:.78s"><td><a href="https://www.packsize.com/resources/faq">Packsize</a><small>Right-sized boxes</small></td><td>Corrugated board</td><td class="g">Yes</td><td>Box fits product</td><td>Recyclable</td><td class="g">None</td><td>Lease, no list price</td></tr>
+  </table>
+  <div class="src">Facts from each company’s own page [16]–[22]; company names link to them. $835 per roll is a distributor listing, currency not stated. Green text marks what a buyer wants. The Hypha row is design targets; its price goal comes from our Holiday interview [15].</div>
+</section>
+
 <!-- 10 · Value map -->
 <section class="slide" data-beats="4" data-title="Value map" data-notes="Our Blue Ocean value map, grouped by Eliminate, Reduce, Raise and Create. Click through: plastic fill (air pillows and peanuts) first, then paper and molded pulp, then Hypha. Last click shades the gap. On the left is what we give up on purpose: the lowest unit cost at huge volume, and standard sizes. On the right is the blue ocean, where nobody competes: waste reduction, sustainability, customization, design flexibility, on-demand production and no minimum order. Hover any point for its score. Scores are our estimates, to be checked in customer interviews.">
   <div class="eyebrow" data-b="0">Blue Ocean value map</div>
@@ -756,14 +922,84 @@ p { margin: 0; }
   <div data-b="1" style="text-align:center;font-family:var(--f-display);font-size:34px;font-weight:500;margin-top:10px">Like a printer and its ink: revenue grows with <em style="font-style:normal;color:var(--forest)">every box shipped</em>.</div>
 </section>
 
-<!-- 12 · Vision -->
-<section class="slide" data-beats="1" data-title="Hypha in one line" data-notes="Read the one-liner slowly. This is the sentence everyone should remember.">
-  <div class="vision">
-    <div class="eyebrow" data-b="0">Hypha in one sentence</div>
-    <blockquote id="visionQuote">Hypha is a smart void-fill system that *3D-prints a biodegradable, mycelium-based foam* directly into the shipping box, expanding around each product in seconds for a *perfect custom fit.* No plastic, no waste, no guesswork.</blockquote>
+<!-- 11c · Value proposition (Geoff Moore) -->
+<section class="slide" data-beats="4" data-title="Value proposition" data-notes="Our written value proposition, built on Geoff Moore’s template. Read it as one sentence, one click per line. For direct-to-consumer brands shipping fragile or oddly shaped products. Click: who want to get plastic out of their packaging without risking broken orders or a cheap-looking unboxing. That’s the problem. Click: Hypha is an on-demand, compostable void-fill system. Click: that replaces plastic fill with home-compostable foam made from mushroom roots and farm waste, printed to fit each product so it stays locked in place. That’s the solution. Click: and unlike air pillows and paper fill, which are the same in every box, or molded mushroom packaging, which needs $2K to $9K tooling and a week to grow, Hypha needs no plastic and no molds.">
+  <div class="eyebrow" data-b="0">Value proposition · Geoff Moore template</div>
+  <h2 data-b="0" style="--d:.1s;font-size:56px;max-width:none">Our value proposition, in <em>one sentence</em>.</h2>
+  <div class="moore">
+    <div class="mr" data-b="0" style="--d:.25s"><div class="lb"><b>For</b><span>Target customer</span></div><p>direct-to-consumer brands shipping <em>fragile or oddly shaped products</em></p></div>
+    <div class="mr" data-b="1"><div class="lb"><b>who</b><span>Need</span><span class="pill">Problem</span></div><p>want to get plastic out of their packaging <em>without risking broken orders</em> or a cheap-looking unboxing,</p></div>
+    <div class="mr" data-b="2"><div class="lb"><b>Hypha is</b><span>Product category</span></div><p>an <em>on-demand, compostable void-fill system</em></p></div>
+    <div class="mr" data-b="3"><div class="lb"><b>that</b><span>Benefit</span><span class="pill">Solution</span></div><p>replaces plastic fill with home-compostable foam made from mushroom roots and farm waste, <em>printed to fit each product</em> so it stays locked in place.</p></div>
+    <div class="mr" data-b="4"><div class="lb"><b>Unlike</b><span>Competition</span></div><p>air pillows and paper fill, which are the same in every box, or molded mushroom packaging, which needs $2K–$9K tooling and a 7-day grow, Hypha needs <em>no plastic and no molds</em>.</p></div>
   </div>
+  <div class="src">Template: Geoff Moore, <i>Crossing the Chasm</i>. Competitor facts: <a href="https://www.nasscoinc.com/item/100699531/Sealed-Air/">[16] Sealed Air</a> · <a href="https://www.ranpak.com/void-fill/">[18] Ranpak</a> · <a href="https://mushroompackaging.com/">[20] Mushroom Packaging</a>. Customer need from our Holiday interview [15]. Hypha’s benefits are design targets.</div>
 </section>
 
+<!-- 11d · Visual value proposition -->
+<section class="slide" data-beats="2" data-title="Visual value proposition" data-notes="Our visual value proposition: all the protection, none of the plastic. On the left is how e-commerce ships today. The same pillows and peanuts go in every box, the product tips and cracks, and the fill goes to landfill. Click: with Hypha, mushroom-based foam is printed into only the empty space and rises around the product, so nothing moves, and the customer composts it at home. Click: the three promises underneath. Custom fit in every box, printed on demand with no molds, and made from mushroom roots and farm waste that go back to the soil. All three are design targets for now.">
+  <div class="eyebrow" data-b="0">Visual value proposition</div>
+  <h2 data-b="0" style="--d:.1s;font-size:56px;max-width:none">All the protection. <em>None of the plastic.</em></h2>
+  <div class="vvp">
+    <div class="vbox" data-b="0" style="--d:.25s">
+      <div class="lbl">Today · generic fill</div>
+      <svg viewBox="0 0 680 330" role="img" aria-label="An open box with a bottle that tips over and cracks among loose plastic air pillows and foam peanuts">
+        <rect x="150" y="70" width="380" height="240" fill="#efede6"/>
+        <g class="tipit">
+          <path d="M310 92 H350 V128 C350 142 384 150 384 176 V306 H276 V176 C276 150 310 142 310 128 Z" fill="#1f3a2e"/>
+          <path class="crk" d="M330 150 L320 186 L338 214 L326 250" fill="none" stroke="#f4f2ee" stroke-width="4" stroke-linejoin="round"/>
+        </g>
+        <g fill="#fbfaf7" stroke="#aebcc8" stroke-width="3">
+          <rect x="164" y="244" width="76" height="44" rx="20"/>
+          <rect x="176" y="176" width="76" height="44" rx="20" transform="rotate(-12 214 198)"/>
+          <rect x="420" y="254" width="76" height="44" rx="20"/>
+          <rect x="432" y="178" width="76" height="44" rx="20" transform="rotate(14 470 200)"/>
+          <rect x="400" y="110" width="76" height="44" rx="20" transform="rotate(-8 438 132)"/>
+        </g>
+        <g fill="#f2f1ea" stroke="#b9b8ac" stroke-width="2.5">
+          <ellipse cx="200" cy="128" rx="12" ry="7"/><ellipse cx="230" cy="146" rx="12" ry="7" transform="rotate(30 230 146)"/>
+          <ellipse cx="190" cy="160" rx="12" ry="7" transform="rotate(-25 190 160)"/><ellipse cx="500" cy="140" rx="12" ry="7" transform="rotate(20 500 140)"/>
+          <ellipse cx="484" cy="236" rx="12" ry="7" transform="rotate(-35 484 236)"/><ellipse cx="270" cy="296" rx="12" ry="7"/>
+        </g>
+        <path d="M118 150 C106 170 106 196 118 216 M98 140 C82 168 82 200 98 226 M562 150 C574 170 574 196 562 216 M582 140 C598 168 598 200 582 226" fill="none" stroke="#c0503c" stroke-width="4" stroke-linecap="round"/>
+        <path d="M140 64 V318 H540 V64 M140 64 L100 24 M540 64 L580 24" fill="none" stroke="#2f6b4c" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+      <p>The same pillows and peanuts in every box. The product shifts and breaks, and the fill ends up in landfill.</p>
+    </div>
+    <svg class="varrow" data-b="1" viewBox="0 0 76 40" aria-hidden="true" style="transform:none"><path class="draw" pathLength="1" d="M4 20 H66" stroke="#2f6b4c" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M52 6 L70 20 L52 34" fill="none" stroke="#2f6b4c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="vbox us" data-b="1" style="--d:.15s">
+      <div class="lbl">With Hypha · printed to fit</div>
+      <svg viewBox="0 0 680 330" role="img" aria-label="The same box; cream mushroom foam rises around an upright bottle and locks it in place, and a small sprout appears">
+        <g class="foam">
+          <rect x="148" y="76" width="384" height="238" fill="#efe5cf"/>
+          <path d="M170 130 C200 160 190 210 230 240 M210 290 C250 260 240 220 270 200 M420 120 C440 160 470 170 500 200 M440 290 C460 250 500 250 510 220 M180 280 C200 250 170 220 190 190" fill="none" stroke="#c9b289" stroke-width="2.5" stroke-linecap="round"/>
+          <g fill="#dccba6"><circle cx="190" cy="110" r="5"/><circle cx="250" cy="150" r="4"/><circle cx="215" cy="210" r="6"/><circle cx="260" cy="270" r="4"/><circle cx="175" cy="250" r="5"/><circle cx="430" cy="150" r="5"/><circle cx="480" cy="110" r="4"/><circle cx="455" cy="230" r="6"/><circle cx="505" cy="270" r="5"/><circle cx="410" cy="290" r="4"/></g>
+          <path d="M304 92 H356 V132 C356 146 392 154 392 182 V310 H268 V182 C268 154 304 146 304 132 Z" fill="none" stroke="#c9b289" stroke-width="10" stroke-linejoin="round"/>
+        </g>
+        <path d="M310 98 H350 V134 C350 148 384 156 384 182 V310 H276 V182 C276 156 310 148 310 134 Z" fill="#1f3a2e"/>
+        <rect x="290" y="196" width="10" height="96" rx="5" fill="#3e5d4d"/>
+        <path class="sprout" d="M330 76 V48 M330 58 C330 40 346 32 362 34 C360 50 346 58 330 58 M330 66 C330 52 316 46 302 48 C304 60 316 66 330 66" fill="#a9c96b" stroke="#2f6b4c" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M140 64 V318 H540 V64 M140 64 L100 24 M540 64 L580 24" fill="none" stroke="#2f6b4c" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+      <p>Mushroom-based foam printed into only the empty space. The product stays locked in place, then the fill composts at home.</p>
+    </div>
+  </div>
+  <div class="vtiles">
+    <div data-b="2"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="3"/><rect x="16" y="16" width="16" height="16" rx="2"/></svg>Custom fit, every box</div>
+    <div data-b="2" style="--d:.12s"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5 H33 V17 H15 Z M19 17 H29 L24 25 Z M8 40 H40 M12 33 H36"/></svg>Printed on demand, no molds</div>
+    <div data-b="2" style="--d:.24s"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 40 C10 20 22 8 40 8 C40 28 28 40 10 40 Z M10 40 L28 22"/></svg>Mushroom roots + farm waste, back to the soil</div>
+  </div>
+  <div class="src">Concept illustration. Custom fit, on-demand printing and home-compostability are Hypha’s design targets, not tested results.</div>
+</section>
+
+<!-- 12 · Our belief -->
+<section class="slide" data-beats="1" data-title="Our belief" data-notes="Close on what we believe. Packaging shouldn’t outlive the order. Click and read it slowly: every Hypha fill is built on one belief. What protects a product for a few days shouldn’t sit in a landfill for years. So we print each fill from mushroom roots and farm waste, shaped to the product and made to return to the soil.">
+  <div class="vision">
+    <div class="eyebrow" data-b="0">What we believe</div>
+    <h2 data-b="0" style="--d:.1s;font-size:88px;max-width:1300px;margin-top:28px">Packaging shouldn’t outlive <em>the order.</em></h2>
+    <blockquote id="visionQuote" style="font-size:40px;margin-top:40px;max-width:1240px">Every Hypha fill is built on one belief: *what protects a product for a few days shouldn’t sit in a landfill for years.* So we print each fill from mushroom roots and farm waste, *shaped to the product and made to return to the soil.*</blockquote>
+  </div>
+</section>
 
 </main>
 </div>

@@ -34,15 +34,36 @@ REFS = [
     (13, "2025 consumer study of 1,193 shoppers (unboxing and repeat purchase)", None),
     (14, "Journal of Consumer Psychology, unboxing experiments", None),
     (15, "Customer interview: Holiday (DTC apparel brand) team, conducted by Ledger, Group 11. Primary research.", "PRIMARY"),
+    (16, "Sealed Air, Fill-Air Extreme inflatable void fill (NASSCO distributor listing)",
+     "https://www.nasscoinc.com/item/100699531/Sealed-Air/"),
+    (17, "Pregis, Void Fill Packaging (EasyPack paper, AirSpeed air cushions, Bio One loosefill)",
+     "https://uk.pregis.com/eu-solutions/by-need/inside-the-box-protection/void-fill-packaging/"),
+    (18, "Ranpak, Void Fill (FillPak paper systems, DecisionTower AI-sized fill)",
+     "https://www.ranpak.com/void-fill/"),
+    (19, "Storopack, PAPERbubble paper padding",
+     "https://www.storopack.us/products/flexible-protective-packaging/paper-padding/paperbubbler/"),
+    (20, "Mushroom Packaging, a division of Ecovative Design (7-day grow, $2K-$9K tooling, $1,350 prototyping, home compostable)",
+     "https://mushroompackaging.com/"),
+    (21, "Magical Mushroom Company (mycelium packaging, UK)",
+     "https://magicalmushroom.com/"),
+    (22, "Packsize, FAQ (on-demand right-sized boxes)",
+     "https://www.packsize.com/resources/faq"),
+    (23, "Grand View Research, Sustainable Packaging Market Report (California single-use plastic law)",
+     "https://www.grandviewresearch.com/industry-analysis/sustainable-packaging-market-report"),
 ]
 
 c = canvas.Canvas("../Hypha_Pitch_Deck_with_Sources.pdf", pagesize=(W, H))
 c.setTitle("Hypha Pitch Deck (with sources)")
 c.setAuthor("Group 11")
 
-for i in range(1, 18):
+import json, glob
+LINKS = json.load(open("links.json"))
+N = len(glob.glob("slide-*.png"))
+for i in range(1, N + 1):
     Image.open(f"slide-{i:02d}.png").convert("RGB").save(f"slide-{i:02d}.jpg", quality=90)  # keeps the PDF small
     c.drawImage(f"slide-{i:02d}.jpg", 0, 0, W, H)
+    for l in LINKS.get(str(i), []):  # keep competitor and source links clickable on the slide itself
+        c.linkURL(l["href"], (l["x"], H - l["y"] - l["h"], l["x"] + l["w"], H - l["y"]), relative=0)
     c.showPage()
 
 def page_bg(title):
@@ -62,7 +83,7 @@ def wrap(text, font, size, width):
     if cur: lines.append(cur)
     return lines
 
-pages = [REFS[:9], REFS[9:]]
+pages = [REFS[:9], REFS[9:17], REFS[17:]]
 for p, chunk in enumerate(pages, 1):
     page_bg(f"Sources ({p} of {len(pages)})")
     y = H - 240
