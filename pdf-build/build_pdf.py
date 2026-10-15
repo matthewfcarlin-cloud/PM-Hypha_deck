@@ -111,7 +111,7 @@ for p, chunk in enumerate(pages, 1):
         y -= 22
     if p == len(pages):
         c.setFillColor(SAGE); c.setFont("Helvetica", 17)
-        notes = ["Notes: Calculated figures (21% void fill share, $800M SAM, $4M SOM) are derived from [1] to [3]. The SOM capture rate (0.5%) is a team",
+        notes = ["Notes: Calculated figures (21% void fill share, $800M SAM, $24M SOM) are derived from [1] to [3]. The SOM capture rate (3%) is a team",
                  "assumption benchmarked against incumbent shares. Value-map scores and the additive-manufacturing scrap illustration are team estimates."]
         yy = 110
         for n in notes: c.drawString(104, yy, n); yy -= 24
