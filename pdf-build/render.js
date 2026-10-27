@@ -13,6 +13,7 @@ const FOOT = {
   'Additive manufacturing': 'Illustration: the scrap share is measured from this drawing, not an industry figure.',
   'Customer interview': 'Source: [15] customer interview with the Holiday team, conducted by Ledger (Group 11). One interview; more needed to confirm the price ceiling.',
   'Value map': 'Scores are our team\'s estimates, to be checked in customer interviews.',
+  'Use of funds': 'Source: [24] Hypha Pro Forma (Google Sheet, linked on the slide). Raise = peak cash need of $3.32M (month 33) plus a ~15% buffer. Each bucket is its share of spending until cash flow turns positive, scaled to $3.32M; the buffer sits in Operations + reserve. Costs and volumes are team assumptions.',
   'Market size': 'Circles not to scale. Sources: [1] Future Market Insights, US & Canada Protective Packaging Market · [2] Market Intelo, Void Fill Packaging Market (e-commerce share) · [3] Future Market Insights, Void Fill Packaging Systems Market Share Analysis. SOM share is our assumption.',
 };
 

@@ -50,6 +50,8 @@ REFS = [
      "https://www.packsize.com/resources/faq"),
     (23, "Grand View Research, Sustainable Packaging Market Report (California single-use plastic law)",
      "https://www.grandviewresearch.com/industry-analysis/sustainable-packaging-market-report"),
+    (24, "Hypha Pro Forma, team financial model (Google Sheet): revenue, costs, EBITDA and cash need by month",
+     "https://docs.google.com/spreadsheets/d/1l65aVK5H2IcMJ-W-V3p3NfhqUJOvrHgzxo5abZoMqqc/edit?usp=sharing"),
 ]
 
 c = canvas.Canvas("../Hypha_Pitch_Deck_with_Sources.pdf", pagesize=(W, H))
