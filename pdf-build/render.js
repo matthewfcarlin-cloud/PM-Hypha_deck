@@ -18,7 +18,7 @@ const FOOT = {
 };
 
 (async () => {
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
   const page = await browser.newPage({ viewport: { width: 1600, height: 956 }, deviceScaleFactor: 2, reducedMotion: 'no-preference' });
   const url = 'file://' + path.resolve(__dirname, 'deck.html');
   await page.goto(url, { waitUntil: 'networkidle' });
